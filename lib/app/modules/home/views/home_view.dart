@@ -15,7 +15,6 @@ class HomeView extends GetView<HomeController> {
       appBar: CustomAppBar(),
       body: SingleChildScrollView(
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Stack(
               clipBehavior: Clip.none,
@@ -27,14 +26,14 @@ class HomeView extends GetView<HomeController> {
                       image: AssetImage("assets/images/Home_background[1].png"),
                       fit: BoxFit.cover,
                     ),
-                    borderRadius: const BorderRadius.only(
-                      bottomLeft: Radius.circular(30),
-                      bottomRight: Radius.circular(30),
+                    borderRadius: const BorderRadius.vertical(
+                      bottom: Radius.circular(30),
                     ),
                   ),
                 ),
                 Positioned(
-                  bottom: -50, // Adjusted to make the image extend outside the container
+                  bottom:
+                      -50, // Adjusted to make the image extend outside the container
                   left: 0,
                   right: 0,
                   child: Center(
@@ -47,10 +46,12 @@ class HomeView extends GetView<HomeController> {
                 ),
               ],
             ),
-            const SizedBox(height: 100), // Adjusted to account for the overlapping image
+            const SizedBox(
+                height: 100), // Adjusted to account for the overlapping image
             const TextDivider(text: "UPCOMING FESTIVALS & EVENTS"),
             const SizedBox(height: 20),
-            SizedBox(height: 150, width: Get.width, child: const SlidingCardList()),
+            SizedBox(
+                height: 150, width: Get.width, child: const SlidingCardList()),
             const SizedBox(height: 20),
             const TextDivider(text: "TEMPLES"),
             const SizedBox(height: 20),

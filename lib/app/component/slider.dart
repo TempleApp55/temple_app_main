@@ -5,16 +5,18 @@ class SlidingCardList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      scrollDirection: Axis.horizontal,
-      itemCount: 5,
-      itemBuilder: (context, index) {
-        return const SlidingCard(
-          imageUrl: 'assets/images/pagoda-bagan.jpg',
-          title: "Ganapathy Homam",
-          location: "Nchumana Devi Temple",
-        );
-      },
+    return SizedBox(
+      child: ListView.builder(
+        scrollDirection: Axis.horizontal,
+        itemCount: 5,
+        itemBuilder: (context, index) {
+          return const SlidingCard(
+            imageUrl: 'assets/images/pagoda-bagan.jpg',
+            title: "Ganapathy Homam",
+            location: "Nchumana Devi Temple",
+          );
+        },
+      ),
     );
   }
 }
