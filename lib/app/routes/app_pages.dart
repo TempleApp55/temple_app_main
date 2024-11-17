@@ -1,5 +1,4 @@
 import 'package:get/get.dart';
-import 'package:templeapp_main/app/modules/onboarding/views/splash_view.dart';
 
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
@@ -7,6 +6,9 @@ import '../modules/login/bindings/login_binding.dart';
 import '../modules/login/views/login_view.dart';
 import '../modules/onboarding/bindings/onboarding_binding.dart';
 import '../modules/onboarding/views/onboarding_view.dart';
+import '../modules/onboarding/views/splash_view.dart';
+import '../modules/temple_details/bindings/temple_details_binding.dart';
+import '../modules/temple_details/views/temple_details_view.dart';
 
 part 'app_routes.dart';
 
@@ -18,7 +20,7 @@ class AppPages {
   static final routes = [
     GetPage(
       name: _Paths.HOME,
-      page: () =>  HomeView(),
+      page: () => HomeView(),
       binding: HomeBinding(),
     ),
     GetPage(
@@ -28,13 +30,18 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.SPLASH,
-      page: () =>  SplashView(),
+      page: () => SplashView(),
       binding: OnboardingBinding(),
     ),
     GetPage(
       name: _Paths.LOGIN,
       page: () => const LoginView(),
       binding: LoginBinding(),
+    ),
+    GetPage(
+      name: _Paths.TEMPLE_DETAILS,
+      page: () => const TempleDetailsView(),
+      binding: TempleDetailsBinding(),
     ),
   ];
 }
