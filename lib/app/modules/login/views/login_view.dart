@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:templeapp_main/app/component/otp_screen.dart';
 import 'package:templeapp_main/app/modules/login/views/signup_view.dart';
 import 'package:templeapp_main/app/routes/app_pages.dart';
 import '../controllers/login_controller.dart';
@@ -64,7 +65,7 @@ class LoginView extends GetView<LoginController> {
               // Sign In Button
               ElevatedButton(
                 onPressed: () {
-                  Get.toNamed(Routes.HOME);
+                  Get.to(OTPView());
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.orange,
