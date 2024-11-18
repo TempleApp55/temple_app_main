@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:templeapp_main/app/component/appbar.dart';
 import 'package:templeapp_main/app/component/divider.dart';
-import 'package:templeapp_main/app/component/slider.dart';
+import 'package:templeapp_main/app/modules/home/widget/slider.dart';
 import 'package:templeapp_main/app/modules/home/widget/temple_card.dart';
 import '../controllers/home_controller.dart';
 

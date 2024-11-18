@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class SlidingCardList extends StatelessWidget {
+  // ignore: use_super_parameters
   const SlidingCardList({Key? key}) : super(key: key);
 
   @override

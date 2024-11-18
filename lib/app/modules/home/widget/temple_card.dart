@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:templeapp_main/app/component/buildDetailRow.dart';
 import 'package:templeapp_main/app/routes/app_pages.dart';
 
 class TempleListView extends StatelessWidget {
@@ -94,13 +95,13 @@ class TempleCard extends StatelessWidget {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            _buildDetailRow(
+                            buildDetailRow(
                               icon: Icons.temple_hindu,
                               text: mainEventName,
                               iconColor: Colors.orange,
                             ),
                             const SizedBox(height: 15),
-                            _buildDetailRow(
+                            buildDetailRow(
                               icon: Icons.location_on,
                               text: mainTempleName,
                               iconColor: Colors.red,
@@ -124,7 +125,7 @@ class TempleCard extends StatelessWidget {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            _buildDetailRow(
+                            buildDetailRow(
                               iconWidget: Image.asset(
                                 "assets/images/7065334_god_swastik_hindu_diwali_india_icon 1.png",
                                 height: 35,
@@ -135,7 +136,7 @@ class TempleCard extends StatelessWidget {
                                   fontWeight: FontWeight.bold, fontSize: 14),
                             ),
                             const SizedBox(height: 10),
-                            _buildDetailRow(
+                            buildDetailRow(
                               icon: Icons.access_time,
                               text: eventTimings,
                               iconColor: Colors.grey,
@@ -153,33 +154,6 @@ class TempleCard extends StatelessWidget {
           ),
         ),
       ),
-    );
-  }
-
-  Widget _buildDetailRow({
-    IconData? icon,
-    Widget? iconWidget,
-    required String text,
-    Color? iconColor,
-    TextStyle? textStyle,
-  }) {
-    return Row(
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
-        if (icon != null)
-          Icon(icon, size: 18, color: iconColor ?? Colors.black)
-        else if (iconWidget != null)
-          iconWidget,
-        const SizedBox(width: 6),
-        Expanded(
-          child: Text(
-            text,
-            style: textStyle ??
-                const TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
-            overflow: TextOverflow.ellipsis,
-          ),
-        ),
-      ],
     );
   }
 }
